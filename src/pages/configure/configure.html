@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>User Configure</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item >
+    <ion-label floating>Name</ion-label>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item >
+    <ion-label floating>Last Name:</ion-label>
+    <ion-input type="text" [(ngModel)]="lastName"></ion-input>
+  </ion-item>
+  <ion-item >
+    <ion-label floating>Username:</ion-label>
+    <ion-input type="text" [(ngModel)]="username"></ion-input>
+  </ion-item>
+  <ion-item >
+    <ion-label floating>Email</ion-label>
+    <ion-input type="text"  [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <button ion-button block (click)="updateUser()">Update</button>
+  <button ion-button block color="danger" (click)="deleteUser()">Delete</button>
+
+</ion-content>

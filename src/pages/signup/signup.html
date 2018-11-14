@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding="true" class="has-header">
+  <!--<ion-img src="../../assets/imgs/logoNoteC.jpg" style="width: 100px; height: 100px; position: relative; left:32%">
+  </ion-img>-->
+  <br>
+  <br>
+  <br>
+    <div >
+    <ion-item color="primary">
+        <ion-label floating>Name:</ion-label>
+        <ion-input type="text" value="" [(ngModel)]="name"></ion-input>
+      </ion-item>
+    <ion-item color="primary">
+      <ion-label floating>Lastname:</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="lastname"></ion-input>
+    </ion-item>
+    <ion-item color="primary">
+        <ion-label floating>Username:</ion-label>
+        <ion-input type="text" value="" [(ngModel)]="username"></ion-input>
+      </ion-item>
+    <ion-item color="primary">
+      <ion-label floating>Password:</ion-label>
+      <ion-input type="password" value="" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item color="primary">
+      <ion-label floating>Email:</ion-label>
+      <ion-input type="email" value="" [(ngModel)]="email"></ion-input>
+    </ion-item>
+  </div>
+  <button ion-button  (click)="goToRegister()" style="position: relative; top:10px; left:100px ">Sign Up</button>
+</ion-content>

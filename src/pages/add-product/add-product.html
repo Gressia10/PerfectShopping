@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Add Product</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Description</ion-label>
+      <ion-input type="text" [(ngModel)]="description"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Prices</ion-label>
+      <ion-input type="text" [(ngModel)]="prices"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Quantify</ion-label>
+      <ion-input type="text" [(ngModel)]="quantify"></ion-input>
+    </ion-item>
+        
+    </ion-list>
+    <button ion-button block (click)="addProduct()">Add</button>
+
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header >
+  <ion-navbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-navbar> 
+</ion-header>
+    
+<ion-content padding>
+  <div style="width: 400px; height: 400px; position: relative; ">
+    <ion-img src="../../assets/imgs/CarLogo.jpg" style="width: 50%; height: 50%; position: relative; left:15%"></ion-img>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" value="" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <button ion-button  color="primary" (click)="login()" style="position: relative; top:10px; left:100px ">Log In</button>
+    <button ion-button color="light" (click)="goToSignup()" style="position: relative; top:70px; left:12px ">Sign up</button>
+  </div>
+</ion-content>
+
+

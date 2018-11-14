@@ -1,0 +1,28 @@
+<ion-header> 
+  <ion-navbar color="primary">
+    <ion-title>Perfect Shopping</ion-title>
+    <div id="home2-button-bar1" class="button-bar">
+        <button ion-button id="home-button1" (click)="profile()" color="primary"  class="button button-positive  ">
+            <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+        </button>
+        <button ion-button id="home-button2" (click)="logout()" color="primary" class="button button-positive  " style="position: relative;  left:200px ">
+            <ion-icon name="exit"></ion-icon>
+        </button>
+      </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+
+<ion-content padding="true" class="has-header">
+    <ion-searchbar [(ngModel)]="productName"></ion-searchbar>
+    <button ion-button  (click)="goTosearch()" color="light" class="button button-positive  " style="position: relative; top: -48px;  right:15px ">
+        <ion-icon ios="ios-search" md="md-search"></ion-icon>
+    </button>
+
+    <ion-list>
+        <button ion-item  *ngFor="let product of products" (click)="goToSeatchDetail(product.product_id)">
+            {{ product.product_name }}
+        </button>  
+    </ion-list>
+</ion-content>

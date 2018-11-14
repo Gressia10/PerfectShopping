@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Profile</ion-title>
+    <div id="profile-button-bar1" class="button-bar">
+        <button ion-button id="home-button1" (click)="goToConfigure()" color="primary"  class="button button-positive  " style="position: relative;  left:200px ">
+            <ion-icon ios="ios-cog" md="md-cog"></ion-icon>
+        </button>
+      </div>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  
+  <!--<ion-item >
+    <ion-label >Name</ion-label>
+    <ion-input type="text" value="{{name}}"></ion-input>
+  </ion-item>
+  <ion-item >
+    <ion-label >Last Name:</ion-label>
+    <ion-input type="text" value="{{lastName}}"></ion-input>
+  </ion-item>
+  <ion-item >
+    <ion-label >Username:</ion-label>
+    <ion-input type="text" value="{{username}}"></ion-input>
+  </ion-item>
+  <ion-item >
+      <ion-label>Email</ion-label>
+    <ion-input type="text" value="{{email}}"></ion-input>
+  </ion-item>-->
+
+  <ion-item >
+    <ion-label >{{username}}</ion-label>
+  </ion-item>
+
+  <ion-label >Products</ion-label>
+  <button ion-button id="home-button1" (click)="goToAddProduct()" color="primary"  class="button button-positive  ">
+      <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon>
+  </button>
+  
+  <ion-list>
+    <button ion-item  *ngFor="let product of products" (click)="goToProductUpdate(product.product_id)">
+      {{ product.product_name }}
+    </button>  
+  </ion-list>
+</ion-content>

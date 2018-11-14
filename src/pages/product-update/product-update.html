@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Product Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>Name</ion-label>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Description</ion-label>
+    <ion-input type="text" [(ngModel)]="description"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Prices</ion-label>
+    <ion-input type="text" [(ngModel)]="prices"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Quantify</ion-label>
+    <ion-input type="text" [(ngModel)]="quantify"></ion-input>
+  </ion-item>
+      
+  <button ion-button block (click)="updateProduct()">Update</button>
+  <button ion-button block color="danger" (click)="deleteProduct()">Delete</button>
+</ion-content>
